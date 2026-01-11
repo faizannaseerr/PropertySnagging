@@ -9,20 +9,23 @@ import Testimonials from "@/components/testimonials";
 import FAQ from "@/components/faq";
 import Contact from "@/components/contact";
 
-
 export default function Home() {
   return (
-    <div className="px-4 flex flex-col items-center justify-center max-w-8xl mx-auto bg-gray-50 font-inter">
+    <>
       <Header />
-      <Hero />
-      <Services />
-      <Coverage />
-      <Reasoning />
-      <Certifications />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <div className="px-4 flex flex-col items-center justify-center max-w-8xl bg-[#fbf9f5] font-inter gap-12">
+        <Hero />
+        <div className="w-full flex flex-col items-center justify-center gap-12 px-2">
+          <Services />
+          <Reasoning />
+          <Coverage />
+          <Certifications />
+          <Testimonials />
+          <FAQ />
+          <Contact />
+        </div>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

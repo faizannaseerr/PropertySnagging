@@ -1,19 +1,20 @@
-import React from 'react'
-import { MessageCircle01 } from '@untitledui/icons'
+import React from "react";
+import { MessageCircle01 } from "@untitledui/icons";
 
 const Header = () => {
   const navItems = [
-    { name: 'Services', href: '#services' },
-    { name: 'Coverage', href: '#coverage' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Testimonies', href: '#testimonies' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
-  ]
+    { name: "Services", href: "#services" },
+    { name: "Why Us", href: "#why-us" },
+    { name: "Coverage", href: "#coverage" },
+    { name: "Certifications", href: "#certifications" },
+    { name: "Testimonies", href: "#testimonies" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
+  ];
 
+  // fixed top-0 left-0 z-10 backdrop-blur-sm bg-white/80 shadow-sm -- for fixed header
   return (
-    <div className='mx-auto w-full flex items-center justify-between px-4 py-2 font-inter'>
+    <div className="mx-auto w-full flex items-center justify-between px-4 py-2 font-inter bg-gray-50">
       {/* Navigation Links */}
       <nav className="flex items-center gap-4">
         {navItems.map((item) => (
@@ -22,7 +23,7 @@ const Header = () => {
             href={item.href}
             className="text-sm font-medium hover:underline hover:opacity-50 transition-all duration-200"
           >
-            {item.name} 
+            {item.name}
           </a>
         ))}
       </nav>
@@ -33,11 +34,11 @@ const Header = () => {
           Request Inspection
         </button>
         <button className="cursor-pointer flex items-center justify-center p-2 rounded-sm border-1 border-black/40 hover:bg-black/5 transition-all duration-200">
-          <MessageCircle01 className='w-3 h-3' />
+          <MessageCircle01 className="w-3 h-3" />
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

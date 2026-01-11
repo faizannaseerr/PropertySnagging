@@ -124,3 +124,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes uae-shimmer-once {
+  0% {
+    background-position: -150% center;
+  }
+  90% {
+    background-position: 150% center;
+  }
+  100% {
+    background-position: 150% center;
+  }
+}
+
+.uae-flag-animation {
+  background: linear-gradient(
+    90deg,
+    #111 0%,
+    #111 45%,
+    #019941 48%,
+    #ff001e 52%,
+    #019941 55%,
+    #111 60%,
+    #111 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: uae-shimmer-once 10s ease-in-out infinite;
+}
